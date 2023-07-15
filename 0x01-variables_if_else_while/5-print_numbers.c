@@ -1,14 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - Entry point reference
- * return 0 (success)
+ * main - program entry point
+ * Return: 0 (success)
  */
 int main(void)
 {
-	int a;
+    char c;
 
-	for (a = 0; a < 10; a++)
-		printf("%d", a);
-	putchar('\n');
-	return 0;
+    c = 'a';
+    while (c <= 'z')
+    {
+        if (c != 'q' && c != 'e')
+            putchar(c);
+        c++;
+    }
+    putchar('\n');
+    return 0;
 }
