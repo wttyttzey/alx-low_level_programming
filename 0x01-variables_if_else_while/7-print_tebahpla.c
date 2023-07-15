@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - entry centre
  *   return: 0 (success)
