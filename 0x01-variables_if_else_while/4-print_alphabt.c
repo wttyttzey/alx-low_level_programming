@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - program entry point
- * Return: 0 (success)
+ * main - Program entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -16,5 +17,5 @@ int main(void)
         c++;
     }
     putchar('\n');
-    return 0;
+    return (0);
 }
