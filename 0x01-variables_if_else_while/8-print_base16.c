@@ -14,17 +14,16 @@ int main(void)
 
     while (h < 10)
     {
-        putchar(h + '0');
-        h++;
+         putchar(h + '0'); 
+         h++;
     }
 
     while (d <= 'f')
-    {
-        putchar(d);
-        d++;
+    { 
+         putchar(d); 
+         d++;
     }
 
     putchar('\n');
-    return 0;
+    return (0);
 }
-
