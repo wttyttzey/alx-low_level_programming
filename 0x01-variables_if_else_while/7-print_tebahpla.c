@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - entry centre
- *   return: 0 (success)
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	char b;
-	
-	b = 'z';
-	while
-		(b >= 'a') {
-			putchar(b);
-			b--;
-		}
-	putchar('\n');
-	return 0;
+    char b;
+
+    b = 'z';
+    while (b >= 'a')
+    {
+        putchar(b);
+        b--;
+    }
+    putchar('\n');
+    return 0;
 }
+
