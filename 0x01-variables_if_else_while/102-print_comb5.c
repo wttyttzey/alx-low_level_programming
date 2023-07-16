@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * main -  print all possible combinations of digits
- * return: 0 (success)
+ * main - Entry point print all possible combinations of digits
+ * Return 0 (success)
  */
 int main(void)
 {
