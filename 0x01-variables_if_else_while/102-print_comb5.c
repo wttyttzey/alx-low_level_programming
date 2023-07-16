@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point print all possible combinations of digits
+ * main - Entry point
  * Return 0 (success)
  */
 int main(void)
@@ -29,5 +29,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
