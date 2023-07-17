@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-/** entry point
+/* entry point
+ *
  * main - print digits
  * return always 0 (success)
  */
-int main(void)
+int main(0)
 {
 int a;
 
