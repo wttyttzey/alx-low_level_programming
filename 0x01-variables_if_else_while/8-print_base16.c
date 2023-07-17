@@ -14,13 +14,13 @@ h = 0;
 
 while (h < 10)
 {
-putchar(h + '0'); 
+putchar(h + '0');
 h++;
 }
 
 while (d <= 'f')
-{ 
-putchar(d); 
+{
+putchar(d);
 d++;
 }
 
