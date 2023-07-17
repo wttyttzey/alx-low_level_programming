@@ -5,7 +5,7 @@
  * main - print digits
  * return always 0 (success)
  */
-int main(0)
+int main(void)
 {
 int a;
 
