@@ -1,30 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point of the program
  *
  * Description: This program prints all possible combinations of single-digit
- * numbers separated by ", ". The numbers are printed in ascending order.
- * It uses the putchar function to print the digits and separators.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int digit; / Variable to store the digits /
+int d;
 
-for (digit = 0; digit < 10; digit++)
+for (d = '0'; d < 10; d++)
 {
-putchar(digit + '0'); / Convert digit to character and print /
+putchar(d);
 
-if (digit < 9)
+if (d < 9)
 {
-putchar(','); / Print comma /
-putchar(' '); / Print space /
+putchar(',');
+putchar(' ');
 }
 }
-putchar('\n'); / Print newline /
-
+putchar('\n');
 return (0);
 }
 
