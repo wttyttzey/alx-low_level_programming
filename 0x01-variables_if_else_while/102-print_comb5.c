@@ -3,15 +3,16 @@
 
 /**
  * main - Entry point
- * description program that prints all possible combinations of two two-digit numbers
- * Return Always 0 (success)
+ * program that prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (success)
  */
 int main(void)
+
 {
 int i, j;
 
 for (i = 0; i < 100; i++)
-	{
+{
 for (j = 0; j < 100; j++)
 {
 if (i < j)
