@@ -23,7 +23,6 @@ putchar(','); / Print comma /
 putchar(' '); / Print space /
 }
 }
-
 putchar('\n'); / Print newline /
 
 return (0);
