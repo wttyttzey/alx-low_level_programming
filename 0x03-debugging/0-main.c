@@ -10,5 +10,6 @@ int i;
 
 i = 0;
 positive_or_nrgative(i);
+
 return (0);
 }
