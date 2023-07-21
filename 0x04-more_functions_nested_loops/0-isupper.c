@@ -1,21 +1,17 @@
 #include "main.h"
 
 /**
- * print_number - Prints an integer using _putchar.
- * @n: The integer to be printed.
+ * _isupper - Checks if a character is uppercase.
+ * @c: The character to be checked.
+ * Return: 1 if uppercase, 0 otherwise.
  */
-void print_number(int n)
-{
-/ Handle negative numbers /
-if (n < 0)
-{
-_putchar('-');
-n = -n;
-}
-/ Recursively print each digit /
-if (n / 10 != 0)
-print_number(n / 10);
-_putchar(n % 10 + '0');
-return;
-}
 
+int _isupper(int c)
+
+{
+if (c >= 65 && c <= 90)
+{
+return (1);
+}
+return (0);
+}
