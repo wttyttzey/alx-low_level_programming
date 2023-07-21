@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * main -prints a FizzBuzz program
- *
+ * main - prints a FizzBuzz program
  * Return: Always 0 (success)
  */
 
 void main(void)
 {
+
 int n;
 for (n = 1; n <= 100; n++)
 {
