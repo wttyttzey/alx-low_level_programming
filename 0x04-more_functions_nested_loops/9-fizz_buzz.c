@@ -6,7 +6,7 @@
  * Return: Always 0 (success)
  */
 
-void main(void)
+int main(void)
 {
 
 int n;
@@ -29,7 +29,7 @@ else
 {
 printf("%d", n);
 }
-if (n !- 100)
+if (n != 100)
 {
 printf(" ");
 }
