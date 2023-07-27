@@ -27,5 +27,5 @@ char *rot13(char *);
 
 char *leet(char *);
 
-int _putchar(char c)
+int _putchar(char c);
 #endif
