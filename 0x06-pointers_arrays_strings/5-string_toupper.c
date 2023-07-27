@@ -1,26 +1,27 @@
 #include "main.h"
 
 /**
- * _strcat - Concatenates two strings.
- * @dest: The destination string.
- * @src: The source string.
- *
- * Return: A pointer to the resulting string dest.
+ * string_toupper - function that change all lower letter of a string to upper
+ * @x: pointer to string.
+ * Return: Pointer to uppercase string.
  */
-char _strcat(char dest, char *src)
-{
-char *result = dest;
 
-while (*dest)
-dest++;
-while (*src)
+char string_toupper(char x)
 {
-dest = src;
-dest++;
-src++;
+
+int length_of_string;
+
+length_of_string = 0;
+
+while (x[length_of_string] != '\0')
+{
+if (x[length_of_string] >= 97 && x[length_of_string] <= 122)
+{
+
+x[length_of_string] = x[length_of_string] - 32;
 }
 
-*dest = '\0';
-
-return (result);
+length_of_string++;
+}
+return (x);
 }
