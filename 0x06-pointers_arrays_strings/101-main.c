@@ -8,14 +8,14 @@
 int main(void)
 {
     print_number(98);
-    putchar('\n');
-    printnumber(402);
-    putchar('\n');
-    printnumber(1024);
-    putchar('\n');
-    printnumber(0);
-    putchar('\n');
-    printnumber(-98);
-    putchar('\n');
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
     return (0);
 }
