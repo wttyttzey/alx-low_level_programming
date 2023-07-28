@@ -4,7 +4,7 @@
 * print_number - prints an integer
 * @n: the integer to print
 */
-void print_number(int n);
+void print_number(int n)
 {
 int i, j, k, d;
 {
