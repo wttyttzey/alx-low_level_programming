@@ -1,30 +1,26 @@
 #include "main.h"
 
 /**
-* print_number - prints an integer
-* @n: the integer to print
-*/
-
-void print_number(int n);
+ * print_number - Print numbers as characters.
+ *
+ * @n: Integer to be printed as characters.
+ *
+ * Return: void
+ */
+void print_number(int n)
 {
-int i,j,k,d;
+unsigned int n1;
+n1 = (n < 0) ? -n : n;
+
+if (n < 0)
 {
 _putchar('-');
-n = -n;
 }
 
-for (i = 0, j = n; j > 0; i++)
-j /= 10;
-
-if (i == 0)
-_putchar('0');
-
-for (j = i - 1; j >= 0; j--)
+if (n1 / 10 != 0)
 {
-for (k = 1, d = 0; d < j; d++)
-k *= 10;
-
-_putchar((n / k) % 10 + '0');
-}
+print_number(n1 / 10);
 }
 
+_putchar(n1 % 10 + '0');
+}
