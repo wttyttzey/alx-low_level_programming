@@ -8,7 +8,7 @@
  */
 char *rot13(char *str)
 {
-char *ptr = str;
+char ptr = str;
 char *rot13_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char *rot13_codes = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
