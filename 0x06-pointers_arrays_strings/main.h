@@ -15,8 +15,6 @@ void reverse_array(int *a, int n);
 
 char *string_toupper(char *);
 
-char *cap_string(char *);
-
 void print_number(int n);
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
@@ -28,4 +26,8 @@ char *rot13(char *);
 char *leet(char *);
 
 int _putchar(char c);
-#endif
+
+char *cap_string(char *str);
+
+#endif /* MAIN_H */
+
