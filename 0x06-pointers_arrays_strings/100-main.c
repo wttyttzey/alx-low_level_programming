@@ -1,29 +1,36 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
+ * rot13 - Encodes a string using rot13.
+ * @str: The input string to be encoded.
  *
- * Return: Always 0.
+ * Return: A pointer to the resulting string str.
  */
-int main(void)
+char *rot13(char *str)
 {
-    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
-    char *p;
+char *ptr = str;
+char *rot13_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char *rot13_codes = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    return (0);
+if (str == NULL)
+return NULL;
+
+while (*ptr)
+{
+int i;
+
+for (i = 0; rot13_chars[i]; i++)
+{
+if (*ptr == rot13_chars[i])
+{
+*ptr = rot13_codes[i]; /* Replace the character with its rot13 equivalent */
+break;
 }
+}
+
+ptr++;
+}
+
+return str;
+}
+
