@@ -1,33 +1,36 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of the program
- *
- * Description: This program prints a[2] = 98.
- *
- * Return: Always 0 (success)
- */
-int main(void)
+* print_number - prints an integer
+* @n: the integer to print
+*/
+void print_number(int n)
 {
-    int n;
-    int i[5];
-    int *p;
+int i, j, k, d;
 
-    i[2] = 1024;
-    p = &n;
+/ if n is negative, print a minus sign and make it positive /
+if (n < 0)
+{
+_putchar('-');
+n = -n;
+}
 
-    /*
-     * Write your line of code here...
-     * Remember:
-     * - You are not allowed to use 'a'
-     * - You are not allowed to modify 'p'
-     * - Only one statement
-     * - You are not allowed to code anything else than this line of code
-     */
-    *(p + 5) = 98;
+/ find the number of digits in n /
+for (i = 0, j = n; j > 0; i++)
+j /= 10;
 
-    / ...so that this prints 98\n /
-    printf("i[2] = %d\n", i[2]);
+/ if n is zero, print zero /
+if (i == 0)
+_putchar('0');
 
-    return (0);
+/ loop through the digits of n from left to right /
+for (j = i - 1; j >= 0; j--)
+{
+/ find the power of 10 for the current position /
+for (k = 1, d = 0; d < j; d++)
+k *= 10;
+
+/ print the digit at the current position /
+_putchar((n / k) % 10 + '0');
+}
 }
