@@ -25,7 +25,7 @@ char *rot13(char *str);
 
 char *leet(char *);
 
-int _putchar(char c);
+int putchar(char c);
 
 char *cap_string(char *str);
 
