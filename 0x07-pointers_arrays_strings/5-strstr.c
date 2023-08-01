@@ -7,7 +7,7 @@
  * Return: Always 0 (success)
  */
 char *_strstr(char *haystack, char *needle)
-{	
+{
 for (; *haystack != '\0'; haystack++)
 {
 char *one = haystack;
@@ -23,4 +23,3 @@ return (haystack);
 }
 return (0);
 }
-	
