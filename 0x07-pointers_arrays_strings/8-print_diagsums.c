@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
- * Print_diagmus - Entry point
+ * Print_diagsums - Entry point
  * @a: input
  * @size: input
  * Return: Always 0 (Success)
