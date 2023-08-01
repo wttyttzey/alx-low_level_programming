@@ -21,5 +21,5 @@ two++;
 if (*two == '\0')
 return (haystack);
 }
-return (null);
+return (NULL);
 }
