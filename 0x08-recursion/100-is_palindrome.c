@@ -1,17 +1,5 @@
- #include "main.h"
-
-/**
- * _strlen_recursion - Returns the length of a string recursively.
- * @s: Pointer to the string.
- * Return: The length of the string.
- */
-int _strlen_recursion(char *s)
-{
-if (*s == '\0')
-return (0);
-
-return (1 + _strlen_recursion(s + 1));
-}
+#include "main.h"
+#include <stddef.h>
 
 /**
  * is_palindrome - Checks if a string is a palindrome.
@@ -20,13 +8,24 @@ return (1 + _strlen_recursion(s + 1));
  */
 int is_palindrome(char *s)
 {
-int length = _strlen_recursion(s);
+char *end;
+if (s == NULL)
+return 0;
 
-if (length <= 1)
-return (1);
+end = s;
+while (*end != '\0')
+end++;
 
-if (*s == *(s + length - 1))
-return (is_palindrome(s + 1));
+end--;
 
-return (0);
+while (s < end)
+{
+if (*s != *end)
+return 0;
+
+s++;
+end--;
+}
+
+return 1;
 }
