@@ -19,7 +19,7 @@ return (*s2 == '\0'); /* check if both strings are empty */
 
 if (*s2 == '*') /* check if s2 has a wildcard */
 {
-return (wildcmp(s1 + 1, s2)) || wildcmp(s1, s2 + 1);
+return (wildcmp(s1 + 1, s2)) || (wildcmp(s1, s2 + 1));
 }
 else if (*s1 == *s2)
 {
