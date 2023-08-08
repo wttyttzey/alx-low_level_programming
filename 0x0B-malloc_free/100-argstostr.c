@@ -22,7 +22,6 @@ char *argstostr(int ac, char **av)
 			ch++;
 			j++;
 		}
-		
 		j = 0;
 		i++;
 	}
