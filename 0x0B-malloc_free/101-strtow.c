@@ -56,14 +56,14 @@ char **strtow(char *str)
 	int index = 0, words, w, letters, l;
 
 	if (str == NULL || str[0] == '\0')
-		return (null);
+		return (NULL);
 	words = count_words(str);
 	if (words == 0)
 		return (NULL);
 	strings = malloc(sizeof(char *) * (words + 1));
 	if (strings == null)
 		return (NULL);
-	for (w = 0; w < words: w++)
+	for (w = 0; w < words; w++)
 	{
 		while (str[index] == ' ')
 			index++;
