@@ -14,7 +14,7 @@ char **strtow(char *str);
 int word_len(char *str)
 {
 	int index = 0, len = 0;
-	
+
 	while (*(str + index) && *(str + index) != ' ')
 	{
 		len++;
@@ -25,7 +25,7 @@ int word_len(char *str)
 
 /**
  * count_words - counts the number of words contained within a string.
- * @str; the string to be searched.
+ * @str: the string to be searched.
  * Return: THe number of words contained within str.
  */
 int count_words(char *str)
@@ -70,7 +70,6 @@ char **strtow(char *str)
 			index++;
 		letters = word_len(str + index);
 		strings[w] = malloc(sizeof(char) * (letters + 1));
-
 		if (strings[w] ==NULL)
 		{
 			for (; w >= 0; w--)
