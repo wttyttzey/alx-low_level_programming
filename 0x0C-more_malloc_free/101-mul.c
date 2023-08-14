@@ -1,64 +1,139 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 
-void print_error() {
-    printf("Error\n");
-    exit(98);
+/**
+ * _strlen - Calculate the length of a string.
+ * @s: The input string.
+ * Return: The length of the string.
+ */
+size_t _strlen(char *s)
+{
+size_t len = 0;
+
+while (*s)
+{
+len++;
+s++;
+}
+return (len);
 }
 
-void multiply(const char *num1, const char *num2) {
-    int len1 = strlen(num1);
-    int len2 = strlen(num2);
-    int result_len = len1 + len2;
-    int *result = calloc(result_len, sizeof(int));
-
-    if (!result)
-        print_error();
-
-    for (int i = len1 - 1; i >= 0; i--) {
-        for (int j = len2 - 1; j >= 0; j--) {
-            int product = (num1[i] - '0') * (num2[j] - '0');
-            int sum = product + result[i + j + 1];
-            result[i + j + 1] = sum % 10;
-            result[i + j] += sum / 10;
-        }
-    }
-
-    int start = 0;
-    while (start < result_len && result[start] == 0)
-        start++;
-
-    if (start == result_len)
-        printf("0");
-    else {
-        for (int i = start; i < result_len; i++)
-            printf("%d", result[i]);
-    }
-
-    printf("\n");
-    free(result);
+/**
+ * _isdigit - Check if a character is a digit.
+ * @c: The input character.
+ * Return: 1 if c is a digit, 0 otherwise.
+ */
+int _isdigit(char c)
+{
+return ((c >= '0' && c <= '9'));
+return ((c >= '0' && c <= '9'));
 }
 
-int main(int argc, char *argv[]) {
-    if (argc != 3)
-        print_error();
+/**
+@@ -34,17 +18,20 @@ return ((c >= '0' && c <= '9'));
+ */
+int _atoi(char *s)
+{
+int result = 0;
+int result = 0;
 
-    char *num1 = argv[1];
-    char *num2 = argv[2];
+while (*s)
+{
+if (!_isdigit(*s))
+exit(98);
+while (*s)
+{
+if (!_isdigit(*s))
+{
+write(1, "Error\n", 6);
+exit(98);
+}
 
-    for (int i = 0; num1[i] != '\0'; i++) {
-        if (num1[i] < '0' || num1[i] > '9')
-            print_error();
-    }
+result = result * 10 + (*s - '0');
+s++;
+}
+return (result);
+result = result * 10 + (*s - '0');
+s++;
+}
+return( result);
+}
 
-    for (int i = 0; num2[i] != '\0'; i++) {
-        if (num2[i] < '0' || num2[i] > '9')
-            print_error();
-    }
+/**
+@@ -55,7 +42,7 @@ return (result);
+ */
+int _mul(int num1, int num2)
+{
+return (num1 * num2);
+return( num1 * num2);
+}
 
-    multiply(num1, num2);
+/**
+@@ -66,31 +53,46 @@ return (num1 * num2);
+ */
+int main(int argc, char *argv[])
+{
+int num1, num2, result;
+int num1, num2, result;
 
-    return 0;
+if (argc != 3)
+{
+write(1, "Error\n", 6);
+exit(98);
+}
+if (argc != 3)
+{
+write(1, "Error\n", 6);
+exit(98);
+}
+
+if (!_isdigit(*argv[1]) || !_isdigit(*argv[2]))
+{
+write(1, "Error\n", 6);
+exit(98);
+}
+if (!_isdigit(*argv[1]) || !_isdigit(*argv[2]))
+{
+write(1, "Error\n", 6);
+exit(98);
+}
+
+num1 = _atoi(argv[1]);
+num2 = _atoi(argv[2]);
+result = _mul(num1, num2);
+num1 = _atoi(argv[1]);
+num2 = _atoi(argv[2]);
+result = _mul(num1, num2);
+
+while (result > 0)
+{
+putchar(result % 10 + '0');
+result /= 10;
+}
+putchar('\n');
+if (result == 0)
+{
+write(1, "0\n", 2);
+}
+else
+{
+char buffer[20];
+int i = 0;
+
+while (result > 0)
+{
+buffer[i++] = result % 10 + '0';
+result /= 10;
+}
+
+while (i > 0)
+{
+write(1, &buffer[--i], 1);
+}
+write(1, "\n", 1);
+}
+
+return (0);
+return (0);
 }
 
